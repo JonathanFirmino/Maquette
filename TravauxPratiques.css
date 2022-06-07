@@ -1,0 +1,65 @@
+/* --------- Les propiétés css qui ne changerons pas ----*/
+header {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80px;
+    background-image: url('ArchivesImages/imageWrap.png');
+}
+
+nav.menu-nav ul li.articles {
+    /* Styliser notre barre de navigation */
+
+    list-style-type: none;
+    display: inline-block;
+
+
+
+}
+
+nav.menu-nav ul {
+
+    margin: 0;
+}
+
+
+nav.menu-nav ul li.articles a {
+
+    display: flex;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+
+
+
+}
+
+/*-------------------- Le Responsive via Media Query ----------------------------------*/
+
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+
+    nav.menu-nav ul li.articles a {
+
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    nav.menu-nav {
+        display: flex;
+    }
+
+    nav.menu-nav ul {
+
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 767px) {}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+
+@media screen and (min-width: 1024px) {}
