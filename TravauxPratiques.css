@@ -1,62 +1,72 @@
 /* --------- Les propiétés css qui ne changerons pas ----*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
 header {
     position: relative;
     display: block;
-    width: 100%;
-    height: 80px;
-    background-image: url('ArchivesImages/imageWrap.png');
-}
-
-nav.menu-nav ul li.articles {
-    /* Styliser notre barre de navigation */
-
-    list-style-type: none;
-    display: inline-block;
-
-
-
-}
-
-nav.menu-nav ul {
-
-    margin: 0;
+    background: url('ArchivesImages/imageWrap.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    height: 15vh;
 }
 
 
-nav.menu-nav ul li.articles a {
-
-    display: flex;
-    color: red;
-    text-decoration: none;
-    font-weight: bold;
-
-
-
-}
 
 /*-------------------- Le Responsive via Media Query ----------------------------------*/
 
 
-@media screen and (min-width: 375px) and (max-width: 424px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {}
 
-    nav.menu-nav ul li.articles a {
 
-        font-weight: bold;
-        margin: 10px;
-    }
 
-    nav.menu-nav {
+
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+
+    .articles {
+
+        padding: 1rem 0;
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
     }
 
-    nav.menu-nav ul {
+    .menu-nav {
 
-        text-align: center;
+        margin-right: 1rem;
+
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .menu-nav a {
+
+        color: red;
+        letter-spacing: 1.5px;
+
+    }
+
+    .menu-nav ul {
+
+        display: flex;
+        text-transform: capitalize;
+        font-size: 8px;
+
+    }
+
+    .menu-nav:first-child {
+        margin-right: auto;
+        margin-left: 1rem;
     }
 }
-
-
-@media screen and (min-width: 425px) and (max-width: 767px) {}
 
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {}
